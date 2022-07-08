@@ -1,0 +1,29 @@
+// staff section
+.staff {
+    width: 100%;
+    h1 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .staff-box {
+        width: 320px;
+        margin-bottom: 100px;
+        .staff-img {
+            width: 320px;
+            height: 400px;
+            img {
+                width: 320px;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+    .director {
+        margin: 0 auto 100px auto;
+    }
+}
+
+.staff-container {
+    flex-wrap: wrap;
+}

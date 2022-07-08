@@ -1,0 +1,250 @@
+@media screen and (max-width:1466px) {
+    //.wrapper,
+    nav {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .tagline {
+        display: none;
+    }
+    .leaf {
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .cursor,
+    .cursor2 {
+        display: none;
+    }
+    nav .list ul {
+        display: none;
+    }
+    #slogen {
+        width: 600px;
+        h1 {
+            font-size: 64px;
+        }
+    }
+    .mesh1 {
+        right: 0;
+    }
+    .mesh2 {
+        left: 0;
+    }
+    .intro-section .intro {
+        width: 700px;
+    }
+    body .wrapper .primary-title {
+        margin-bottom: 100px;
+        text-align: center;
+        h1 {
+            font-size: 30px;
+            line-height: 1;
+        }
+        .subtitle {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+    }
+    .visit-us .container {
+        justify-content: center;
+    }
+    .container .box2 {
+        margin-top: 0;
+    }
+    .box {
+        margin-bottom: 50px;
+    }
+    //blog page
+    .header2 {
+        width: 100%;
+        height: 500px;
+        .slogen2 {
+            font-size: 32px;
+            text-align: center;
+        }
+        .search-input {
+            height: 60px;
+            width: 360px;
+            input[type="text"] {
+                height: 60px;
+                width: 300px;
+            }
+            .submit {
+                position: relative;
+                display: inline-block;
+                input {
+                    width: 60px;
+                    height: 60px;
+                    background: $orangeColor;
+                    border: none;
+                }
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    //visit pages
+    .header3 .header3Bg {
+        width: 100%;
+    }
+    .header3 .slogen {
+        color: #fff;
+        mix-blend-mode: difference;
+    }
+    //museum odyssey page
+    .museum-odyssey-header .odyssey-h-img1 {
+        right: -120px;
+        transform: rotate(12deg);
+        width: 200px;
+    }
+    .museum-odyssey-header .odyssey-h-img2 {
+        left: -120px;
+        transform: rotate(-12deg);
+        width: 200px;
+    }
+    // location 
+    .location-revers {
+        flex-direction: column-reverse;
+        width: 360px;
+        .img,
+        .txt {
+            width: 320px;
+            img {
+                width: 320px;
+            }
+        }
+    }
+    .location {
+        margin-bottom: 50px;
+        .img {
+            width: 360px;
+        }
+    }
+    //founders & obituary
+    .founders-obituary .names-box h3 {
+        font-size: 18px;
+    }
+    //speech section
+    .speech-img1,
+    .speech-img2,
+    .speech-img3 {
+        display: none;
+    }
+    .books-table table {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    nav {
+        padding: 0 10px;
+    }
+    //section
+    section {
+        padding: 100px 10px;
+    }
+    #slogen {
+        position: absolute;
+        width: 300px;
+        top: -200px;
+        left: 50%;
+        line-height: 150px;
+        transform: translateX(-50%);
+        z-index: 8;
+        h1 {
+            color: $dark;
+            font-size: 36px;
+            text-align: center;
+            font-weight: normal;
+            margin: auto;
+            width: fit-content;
+        }
+    }
+    .header1 .Header1-bg {
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        height: 520px;
+        width: 360px;
+        z-index: 3;
+    }
+    .mesh1,
+    .mesh2 {
+        display: none;
+    }
+    .intro-section .intro {
+        width: 300px;
+    }
+    .rooms .rooms-container .room-box h3 {
+        font-size: 32px;
+    }
+    .blog .post-container {
+        justify-content: center;
+        .post1 {
+            width: 360px;
+            .img-container {
+                width: 360px;
+            }
+        }
+    }
+    //blog page
+    .header2 {
+        width: 100%;
+        .slogen2 {
+            font-size: 32px;
+            text-align: center;
+            color: $dark;
+        }
+    }
+    .blog-page-posts {
+        width: 360px;
+        justify-content: center;
+    }
+    //single-blog-page
+    .single-post-blog-container {
+        width: 360px;
+    }
+    //visits pages
+    // family visits pages
+    .family-visits-description-title {
+        width: 100%;
+    }
+    .family-visits-description-para {
+        width: 100%;
+    }
+    //workshops page
+    .workshops .title {
+        width: 100%;
+    }
+    .workshops .workshop1 {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        .workshop-post {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+    .workshop2 {
+        margin-bottom: 50px;
+    }
+    .reservation form {
+        width: 100%;
+    }
+}

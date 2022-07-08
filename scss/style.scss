@@ -1,0 +1,662 @@
+@import "config";
+@import "universal";
+// @import "components";
+body {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.6;
+    overflow-x: hidden;
+    height: auto;
+    background: $light;
+    color: $primaryColor;
+    font-family: $inter;
+    line-height: 1.6;
+    position: relative;
+    top: 0;
+}
+
+//curser
+.cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid $primaryColor;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 101;
+    mix-blend-mode: difference;
+    background: rgb(250, 246, 235);
+}
+
+.cursor2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #000;
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 101;
+    background: $secondaryColor;
+}
+
+.hover {
+    background-color: $secondaryColor;
+    opacity: 0.2;
+    width: 80px;
+    height: 80px;
+}
+
+.hoverslide,
+.hovercard {
+    width: 80px;
+    height: 80px;
+    mix-blend-mode: normal;
+    object-fit: contain;
+}
+
+.hoverslide {
+    background: url(./../icons/dragIcon.png) center;
+    background-size: contain;
+}
+
+.hovercard {
+    background: url(./../icons/eyeIcon.png) center;
+    background-size: contain;
+}
+
+.hoverroom1 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room1.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.hoverroom2 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room2.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.hoverroom3 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room3.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.hoverroom4 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room4.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.hoverroom5 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room5.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.hoverroom6 {
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    mix-blend-mode: normal;
+    background: url(./../images/room6.png) center;
+    background-size: cover;
+    opacity: .9;
+}
+
+.cursorinnerhover {
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+}
+
+//wrapper
+.wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    z-index: 1;
+    overflow: hidden;
+}
+
+//Noise
+.noiseBg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .4s infinite;
+    opacity: .5;
+    visibility: visible;
+    z-index: 100;
+    pointer-events: none;
+}
+
+@keyframes bg-animation {
+    0% {
+        transform: translate(0, 0)
+    }
+    10% {
+        transform: translate(-5%, -5%)
+    }
+    20% {
+        transform: translate(-10%, 5%)
+    }
+    30% {
+        transform: translate(5%, -10%)
+    }
+    40% {
+        transform: translate(-5%, 15%)
+    }
+    50% {
+        transform: translate(-10%, 5%)
+    }
+    60% {
+        transform: translate(15%, 0)
+    }
+    70% {
+        transform: translate(0, 10%)
+    }
+    80% {
+        transform: translate(-15%, 0)
+    }
+    90% {
+        transform: translate(10%, 5%)
+    }
+    100% {
+        transform: translate(5%, 0)
+    }
+}
+
+.header1 {
+    position: relative;
+    margin-top: 250px;
+    height: 570px;
+    width: 100%;
+    .Header1-bg {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        height: 520px;
+        width: 360px;
+        z-index: 3;
+    }
+    .slogen {
+        position: absolute;
+        width: 900px;
+        top: 50px;
+        left: 50%;
+        line-height: 150px;
+        transform: translateX(-50%);
+        z-index: 8;
+        h1 {
+            color: $dark;
+            font-size: 128px;
+            text-align: center;
+            font-weight: normal;
+            margin: auto;
+            width: fit-content;
+        }
+    }
+    .tagline {
+        position: absolute;
+        left: 30px;
+        bottom: 150px;
+        width: 225px;
+    }
+    .tagline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+        height: 3px;
+        width: 225px;
+        background: $primaryColor;
+    }
+    .circle-container {
+        height: 200px;
+        width: 200px;
+        mix-blend-mode: difference;
+        position: absolute;
+        right: 26%;
+        top: 350px;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .circle-text {
+        width: 200px;
+        animation: rotation 9s linear infinite;
+    }
+    .circle-arrow {
+        width: 70px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// mesh gradient 
+.mesh {
+    position: absolute;
+    z-index: -1;
+}
+
+.mesh1 {
+    right: 10%;
+    width: 160px;
+    top: 230px;
+    right: 80px;
+    animation: undulation 1.2s linear alternate infinite;
+}
+
+.mesh2 {
+    left: 140px;
+    width: 70px;
+    top: 0;
+    animation: undulation 1.2s linear alternate infinite;
+    animation-delay: 1s;
+}
+
+.mesh3 {
+    width: 160px;
+    animation: undulation 1.2s linear alternate infinite;
+    animation-delay: 1s;
+    left: 0;
+    top: 420px;
+}
+
+//section
+section {
+    width: 100%;
+    padding: 100px 50px;
+}
+
+//Intro section
+.intro-section {
+    position: relative;
+    .leaf {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+    }
+    .intro {
+        width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        .introimg {
+            display: inline-block;
+            width: 65px;
+            height: 65px;
+            position: relative;
+        }
+        .introimg1::after {
+            content: "";
+            width: 65px;
+            height: 65px;
+            background: url(./../icons/introimg1.png);
+            position: absolute;
+            top: 20%;
+            left: 0
+        }
+        .introimg2::after {
+            content: "";
+            width: 65px;
+            height: 65px;
+            background: url(./../icons/introimg2.png);
+            position: absolute;
+            top: 20%;
+            left: 0
+        }
+        .introimg3::after {
+            content: "";
+            width: 65px;
+            height: 65px;
+            background: url(./../icons/introimg3.png);
+            position: absolute;
+            top: 20%;
+            left: 0
+        }
+        h3 {
+            position: relative;
+            svg {
+                position: absolute;
+                z-index: -1;
+                top: -25px;
+                left: -20px
+            }
+        }
+    }
+}
+
+//Visit us section
+.visit-us {
+    width: 100%;
+    margin-bottom: 100px;
+    .container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .box {
+            text-align: center;
+            width: 320px;
+            margin-bottom: 50px;
+            h3 {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .box2 {
+        margin-top: 250px;
+    }
+}
+
+// hero img section
+.hero-img {
+    height: 650px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+    .img {
+        width: 110%;
+        height: 110%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background: url('./../images/movingBg.png') no-repeat left center / cover;
+    }
+}
+
+//rooms section
+.rooms .rooms-container {
+    width: 100%;
+    margin: 100px auto;
+    .room-box {
+        justify-content: space-between;
+        margin-bottom: 30px;
+        padding: 20px 0 60px 0;
+        border-bottom: 1px solid $secondaryColor;
+        h3 {
+            font-size: 64px;
+        }
+    }
+}
+
+//blog
+.blog .post-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 150px 0;
+    .post-box {
+        width: fit-content;
+        p,
+        H3 {
+            width: 100%;
+        }
+        .post-category {
+            font-size: 14px;
+            padding: 15px 0 10px 0;
+            font-family: $playfair;
+            color: $orangeColor;
+        }
+        .post-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    .post1 {
+        width: 450px;
+        margin-bottom: 50px;
+        .img-container {
+            height: 280px;
+            width: 450px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .post-category {
+            margin-top: 10px;
+        }
+        .post-title {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        .post-author {
+            font-size: 14px;
+            margin-top: 35px;
+            color: $secondaryColor;
+        }
+    }
+    .post2 {
+        width: 275px;
+        margin-bottom: 50px;
+        .img-container {
+            height: 170px;
+            width: 275px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .post3 {
+        width: 270px;
+        border-top: 1px solid $secondaryColor;
+        padding: 15px 0 35px 0;
+    }
+}
+
+//footer
+footer {
+    background: $dark;
+    color: #fff;
+    padding: 150px 0 75px 0;
+    width: 100%;
+    text-align: center;
+    .footer-content {
+        width: 100%;
+        //max-width: 1366px;
+        h3 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .social-media {
+            margin: 50px 0 100px 0;
+            img {
+                margin: 0 8px;
+            }
+        }
+        .copyright {
+            font-size: 14px;
+            font-weight: 400;
+            color: #ddd;
+        }
+    }
+}
+
+.splide1 {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    .splide__slide {
+        height: fit-content;
+        width: 320px;
+        img {
+            display: block;
+            transition: transform 400ms;
+            transform-origin: center center;
+            height: 420px;
+            width: 320px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    .splide__list {
+        width: 100%;
+    }
+}
+
+.splide2 {
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1366px;
+    .splide__slide {
+        height: fit-content;
+        width: 230px;
+        img {
+            display: block;
+            transition: transform 400ms;
+            transform-origin: center center;
+            height: 320px;
+            width: 230px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    .splide__list {
+        width: 100%;
+    }
+}
+
+.splide3 {
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1366px;
+    .splide__slide {
+        height: fit-content;
+        width: 100%;
+        img {
+            display: block;
+            transition: transform 400ms;
+            transform-origin: center center;
+            height: auto;
+            width: 260px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+    .splide__list {
+        width: 100%;
+    }
+}
+
+//////////////////////////////////////////////
+/// 
+//collection section
+.collection {
+    width: 100%;
+    .collection-content {
+        width: 100%;
+        animation: fade .8s linear;
+        position: relative;
+        .name {
+            font-family: $playfair;
+            position: absolute;
+            right: 0;
+            top: 50px;
+            font-size: 24px;
+            pointer-events: none;
+        }
+        .num {
+            font-family: $playfair;
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            font-size: 24px;
+            pointer-events: none;
+        }
+        .description {
+            position: absolute;
+            left: 0;
+            bottom: 100px;
+            pointer-events: none;
+        }
+    }
+    .slide {
+        width: fit-content;
+        margin: 75px auto;
+        .collection-box {
+            width: 100%;
+            height: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+        i {
+            margin: 0 13px;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: $orangeColor;
+            }
+        }
+        .dot-active {
+            color: $orangeColor;
+        }
+    }
+}
+
+#obj1>img,
+#obj2>img,
+#obj3>img,
+#obj4>img,
+#obj5>img {
+    display: block;
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+@import "visits";
+@import "library";
+@import "blog";
+@import "museum-odyssey";
+@import "contact";
+@import "staff";
+@import "animation";
+@import "media";
