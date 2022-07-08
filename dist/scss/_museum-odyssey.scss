@@ -1,0 +1,171 @@
+//museum-odyssey-page
+//museum-odyssey-header
+.museum-odyssey-header {
+    height: 620px;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    .primary-title {
+        position: relative;
+        margin-top: 275px;
+    }
+    .mesh1 {
+        display: block;
+        position: unset;
+        margin: auto;
+        transform: rotate(-110deg);
+        filter: grayscale(1);
+    }
+    .odyssey-h-img {
+        position: absolute;
+        top: -100px;
+        z-index: -1;
+    }
+    .odyssey-h-img1 {
+        right: 50px;
+        transform: rotate(12deg);
+    }
+    .odyssey-h-img2 {
+        left: 50px;
+        transform: rotate(-12deg);
+    }
+}
+
+.museum-odyssey-intro {
+    filter: grayscale(1);
+    padding: 0 0 100px 0;
+    .intro-time-line {
+        width: 360px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 40px;
+        .line {
+            width: 240px;
+            height: 2px;
+            background: $secondaryColor;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+//museum section story
+.museum-story {
+    width: 100%;
+    .decription {
+        text-align: center;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+//museum previous locations section
+.previous-locations {
+    width: 100%;
+    margin-top: 150px;
+    .location {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .img {
+        width: 420px;
+        height: 300px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .txt {
+        width: 500px;
+        h2 {
+            margin: 60px 0 25px 0;
+        }
+    }
+}
+
+// founders section
+.founders-obituary {
+    width: 100%;
+    .founders-names {
+        width: 80%;
+        margin: 100px auto;
+        .names-box {
+            font-size: 36px;
+            justify-content: space-between;
+            padding: 30px 0;
+            border-bottom: 1px solid #999;
+        }
+    }
+}
+
+.speech {
+    position: relative;
+    z-index: 5;
+    .speech-img1 {
+        position: absolute;
+        left: 0;
+        top: -150px;
+        z-index: -1;
+    }
+    .speech-img2 {
+        position: absolute;
+        right: 0;
+        top: -150px;
+        z-index: -1;
+    }
+    .speech-img3 {
+        position: absolute;
+        right: 250px;
+        top: 200px;
+        z-index: -1;
+    }
+}
+
+//newspaper section
+.newspaper {
+    height: 800px;
+    .img {
+        background: url(./../images/newspaper.png) center center;
+    }
+}
+
+//goverments-word
+.goverments-word {
+    width: 100%;
+    margin-bottom: 150px;
+    .word-container {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .word-txt {
+        width: 60%;
+        min-width: 360px;
+        margin-bottom: 50px;
+        svg {
+            margin: 75px 0 40px 0;
+        }
+        h3 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        .job-title {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    }
+    .word-img {
+        width: 400px;
+        height: 600px;
+        border-radius: 300px 300px 0 0;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

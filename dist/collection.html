@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="pingback" href="https: //domainname.com/xmlrpc.php" />
+    <title></title>
+    <!-- fonts and icons resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- style and script resources -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./css/style.css" media="all">
+
+    <script src=""></script>
+    <!--meta properties -->
+    <meta name="description" content=" Your site description." />
+    <!--detailed robots meta https://developers.google.com/search/reference/robots_meta_tag -->
+    <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview:large, max-video-preview: -1" />
+    <link rel="canonical" href="" />
+    <!--open graph meta tags for social sites and search engines-->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="  Opengraph content 25 char are best" />
+    <meta property="og:description" content="  #description." />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="images//hom-banner-compressed.jpg" />
+    <meta property="og:image:secure_url" content="images//hom-banner-compressed.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="660" />
+    <!--twitter description-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="." />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:image" content="images/hom-banner-compressed.jpg" />
+    <meta name="twitter:creator" content="@" />
+    <!--opengraph tags for location or address for information panel in google-->
+    <meta name="og:latitude" content="" />
+    <meta name="og:longitude" content="" />
+    <meta name="og:street-address" content="" />
+    <meta name="og:locality" content="" />
+    <meta name="og:region" content="" />
+    <meta name="og:postal-code" content="" />
+    <meta name="og:country-name" content="" />
+    <!--search engine verification-->
+    <meta name="google-site-verification" content="" />
+    <meta name="yandex-verification" content="" />
+    <!--powered by meta-->
+    <meta name="generator" content="" />
+    <!-- Site fevicon icons -->
+    <link rel="icon" href="./icons/ico.png" sizes="32x32" />
+    <link rel="icon" href="images/icon/cropped-cropped-favicon-1-1-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icon/cropped-cropped-favicon-1-1-180x180.png" />
+    <meta name="msapplication-TileImage" content="images/icon/cropped-cropped-favicon-1-1-270x270.png" />
+    <!--complete list of meta tags at - https://gist.github.com/lancejpollard/1978404 -->
+    <!-- font awesome only for collection page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" /> document.write('
+    <style>
+        .viewer {
+            position: relative;
+            margin: 20px 0
+        }
+        
+        #pdtViewer {
+            width: 100%;
+            margin: 0 auto
+        }
+        
+        #pdtViewer img {
+            padding: 40px 20px;
+            border: .5px solid #eee;
+            user-select: none;
+            -moz-user-select: none
+        }
+        
+        #dummy {
+            display: none
+        }
+        
+        .loader {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, .5);
+            z-index: 1;
+            top: 0
+        }
+        
+        .three-bounce {
+            text-align: center;
+            font-size: 26px;
+            position: absolute;
+            top: 50%;
+            left: 50%
+        }
+        
+        .three-bounce div {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            background-color: #fff;
+            -webkit-animation: bouncedelay 1.4s infinite ease-in-out both;
+            animation: bouncedelay 1.4s infinite ease-in-out both
+        }
+        
+        .three-bounce .one {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s
+        }
+        
+        .three-bounce .two {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s
+        }
+        
+        .btnDiv {
+            text-align: center;
+            margin: 10px 0
+        }
+        
+        .btnDiv button {
+            margin: 4px 8px;
+            padding: 20px;
+            border: 0;
+            background-color: dodgerblue;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 16px;
+            position: relative;
+            cursor: pointer
+        }
+        
+        .btnDiv button:active {
+            background-color: #006dd8
+        }
+        
+        .btnDiv button:hover {
+            box-shadow: 0 0 8px 1px #1b8eff
+        }
+        
+        .btnDiv button:focus {
+            outline: 0
+        }
+        
+        .btnDiv button:before,
+        .btnDiv button.pause:after,
+        .btnDiv button.plus:after,
+        .btnDiv button.right:after,
+        .btnDiv button.left:after {
+            position: absolute;
+            content: ""
+        }
+        
+        .btnDiv button.play:before,
+        .btnDiv button.left:before,
+        .btnDiv button.right:after {
+            border: 11px solid transparent;
+            border-left-color: inherit;
+            left: 16px;
+            top: 24%
+        }
+        
+        .btnDiv button.pause:before,
+        .btnDiv button.pause:after {
+            left: 12px;
+            top: 28%;
+            width: 6px;
+            height: 19px;
+            background: #fff
+        }
+        
+        .btnDiv button.pause:after {
+            right: 12px;
+            left: auto
+        }
+        
+        .btnDiv button.stop:before {
+            left: 11px;
+            top: 25%;
+            width: 45%;
+            height: 50%;
+            background: #fff
+        }
+        
+        .btnDiv button.plus:before {
+            left: 17px;
+            top: 27%;
+            background: #fff;
+            width: 6px;
+            height: 20px
+        }
+        
+        .btnDiv button.plus:after,
+        .btnDiv button.minus:before,
+        .btnDiv button.right:before,
+        .btnDiv button.left:after {
+            left: 9px;
+            top: 44%;
+            background: #fff;
+            width: 22px;
+            height: 6px
+        }
+        
+        .btnDiv button.left:after {
+            left: 11px;
+            width: 21px
+        }
+        
+        .btnDiv button.right:before {
+            width: 20px
+        }
+        
+        .btnDiv button.left:before,
+        .btnDiv button.play.leftNav:before {
+            border-right-color: inherit;
+            border-left-color: transparent;
+            left: -4px
+        }
+        
+        .btnDiv button.right:after {
+            left: 22px
+        }
+        
+        .btnDiv button.play.leftNav:before {
+            left: 1px;
+            top: 21%
+        }
+        
+        .btnDiv.navDiv {
+            text-align: left
+        }
+        
+        .btnDiv.navDiv button {
+            position: absolute;
+            top: 50%
+        }
+        
+        .btnDiv.navDiv button.rightNav {
+            right: 0
+        }
+        
+        img.draggable {
+            cursor: e-resize
+        }
+        
+        img.keys {
+            cursor: pointer
+        }
+        
+        @keyframes bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+            40% {
+                transform: scale(1);
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @-webkit-keyframes bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+            40% {
+                transform: scale(1);
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @media screen and (max-width:1030px) {
+            #pdtViewer img {
+                width: 100%
+            }
+        }
+        
+        @media screen and (max-width:992px) {
+            .hidePhone {
+                display: none
+            }
+            .btnDiv {
+                zoom: .7
+            }
+        }
+        
+        @media screen and (max-width:1250px) {
+            #pdtViewer img {
+                padding: 40px 0
+            }
+            #pdtViewer {
+                width: 95%
+            }
+        }
+        
+        @media screen and (max-width:767px) {
+            .fork {
+                width: 100px;
+                position: absolute!important
+            }
+            h1 {
+                margin-top: 60px
+            }
+        }
+    </style>');
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/" media="print" />
+    <script src="" async defer></script>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <!-- Noise start here -->
+    <img class="noiseBg" src="./icons/Niose.png" alt="">
+    <!-- Noise end here -->
+    <!-- navbar start here -->
+    <nav>
+        <div class="nav-content flex">
+            <!-- logo -->
+            <div class="logo ">
+                <a class="link" href="./index.html">
+                    <img src="./icons/logo.svg" alt="">
+                </a>
+            </div>
+            <!-- logo -->
+            <!-- list -->
+            <div class="list">
+                <ul class="flex">
+                    <li>
+                        <a class="link" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="link" href="">Location</a>
+                    </li>
+                    <li>
+                        <a class="link" href="">Museum Map</a>
+                    </li>
+                    <li>
+                        <a class="link" href="./contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a class="link" href="./ticket.html">Ticket</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- list -->
+            <!-- menu -->
+            <div class="menu flex">
+                <div class="burger-menu">
+                    <a class="navbar-menu-open">
+                        <img src="./icons/Menu.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- menu -->
+        </div>
+    </nav>
+    <!-- navbar end here -->
+    <!-- overlay menu -->
+    <div class="navbar-menu center">
+        <a class="navbar-menu-close">
+            <img src="./icons/navbar-menu-close.svg" alt="">
+        </a>
+        <div class="menu-lists">
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <h4>Visit</h4>
+                    </div>
+                    <div class="sub-link ">
+                        <a href="./ticket.html">
+                            <p>- Tickets</p>
+                        </a>
+                        <a href="">
+                            <p>- Plan your visit</p>
+                        </a>
+                        <a href="family-visits.html">
+                            <p>- Family visit</p>
+                        </a>
+                        <a href="group-visits.html">
+                            <p>- Group visit</p>
+                        </a>
+                        <a href="">
+                            <p>- Museum map</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <a href="">
+                            <h4>Exhibitions & Events</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <h4>Collection</h4>
+                    </div>
+                    <div class="sub-link ">
+                        <a href="collection.html">
+                            <p>- Collection Heighlight</p>
+                        </a>
+                        <a href="prehistoric-room.html">
+                            <p>- Prehistoric room</p>
+                        </a>
+                        <a href="antiquity-room.html">
+                            <p>- Antiquity room</p>
+                        </a>
+                        <a href="islamic-room.html">
+                            <p>- Islamic room</p>
+                        </a>
+                        <a href="coinage-room.html">
+                            <p>- Coinage room</p>
+                        </a>
+                        <a href="mosaics-basin-&-corridors.html">
+                            <p>- Mosaics basin & corridors</p>
+                        </a>
+                        <a href="ethongraphy-facades.html">
+                            <p>- Ethongraphy facades</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <h4>Learn</h4>
+                    </div>
+                    <div class="sub-link ">
+                        <a href="schools.html">
+                            <p>- Schools</p>
+                        </a>
+                        <a href="./restoration-laboratory.html">
+                            <p>- Restoration laboratory</p>
+                        </a>
+                        <a href="./archaeological-reserves.html">
+                            <p>- Archaeological reserves</p>
+                        </a>
+                        <a href="./publication.html">
+                            <p>- Pulication</p>
+                        </a>
+                        <a href="./library.html">
+                            <p>- Library</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <a href="./workshop.html">
+                            <h4>Workshops</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <a href="./blog.html">
+                            <h4>Blog</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list flex center-x">
+                <div class="circle"></div>
+                <div class="list flex">
+                    <div class="primary-link">
+                        <h4>About</h4>
+                    </div>
+                    <div class="sub-link ">
+                        <a href="museum-odyssey.html">
+                            <p>Museum odyssey</p>
+                        </a>
+                        <a href="./staff.html">
+                            <p>Staff</p>
+                        </a>
+                        <a href="./contact.html">
+                            <p>Contact us</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- overlay menu -->
+    <!-- wrapper here -->
+    <div class="wrapper">
+        <!-- header here -->
+        <header class="header2 contact-header center">
+            <div class="header-content">
+                <div class="primary-title">
+                    <p>/*</p>
+                    <h1>Collection highlight</h1>
+                    <p class="subtitle">We love to hear from you</p>
+                </div>
+            </div>
+            <img src="./icons/mesh1.png">
+        </header>
+        <!-- header here -->
+        <!-- family visits description -->
+
+        <p class="family-visits-description-para" style="margin-top: 75px;">Over 3,000 pieces dating back to 2.4 million years ago </p>
+        <p class="family-visits-description-para" style="font-size:24px">The museum's collections are very rich, there are pieces from prehistory, antiquity, Islamic arts and numismatics. Thus, one can discover sets of archaeological remains, most of which date back to Roman times, from excavations carried out in Sitives,
+            Qal'at Bani Hammad and Jamila.</p>
+
+        <!-- family visits description -->
+        <!-- collection section here -->
+        <section class="collection">
+            <div class="collection-content mySlides">
+                <div class="collection-box">
+                    <div id="pdtViewer">
+                        <div id="obj1"></div>
+                    </div>
+                    <div class="name">Name of the Object</div>
+                    <div class="num">01/05</div>
+                    <div class="description">
+                        <p>Date</p>
+                        <p>Culter</p>
+                        <p>Matériel</p>
+                        <p>Classification</p>
+                        <p>Object Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-content mySlides">
+                <div class="collection-box">
+                    <div id="pdtViewer">
+                        <div id="obj2"></div>
+                    </div>
+                    <div class="name">Name of the Object</div>
+                    <div class="num">01/05</div>
+                    <div class="description">
+                        <p>Date</p>
+                        <p>Culter</p>
+                        <p>Matériel</p>
+                        <p>Classification</p>
+                        <p>Object Number</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="collection-content mySlides">
+                <div class="collection-box">
+                    <div id="pdtViewer">
+                        <div id="obj3"></div>
+                    </div>
+                    <div class="name">Name of the Object</div>
+                    <div class="num">01/05</div>
+                    <div class="description">
+                        <p>Date</p>
+                        <p>Culter</p>
+                        <p>Matériel</p>
+                        <p>Classification</p>
+                        <p>Object Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-content mySlides">
+                <div class="collection-box">
+                    <div id="pdtViewer">
+                        <div id="obj4"></div>
+                    </div>
+                    <div class="name">Name of the Object</div>
+                    <div class="num">01/05</div>
+                    <div class="description">
+                        <p>Date</p>
+                        <p>Culter</p>
+                        <p>Matériel</p>
+                        <p>Classification</p>
+                        <p>Object Number</p>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-content mySlides">
+                <div class="collection-box">
+                    <div id="pdtViewer">
+                        <div id="obj5"></div>
+                    </div>
+                    <div class="name">Name of the Object</div>
+                    <div class="num">01/05</div>
+                    <div class="description">
+                        <p>Date</p>
+                        <p>Culter</p>
+                        <p>Matériel</p>
+                        <p>Classification</p>
+                        <p>Object Number</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dummy"></div>
+            <div class="slide">
+                <i class="fa fa-circle slide-btn dot" onclick="currentSlide(1)"></i>
+                <i class="fa fa-circle slide-btn dot" onclick="currentSlide(2)"></i>
+                <i class="fa fa-circle slide-btn dot" onclick="currentSlide(3)"></i>
+                <i class="fa fa-circle slide-btn dot" onclick="currentSlide(4)"></i>
+                <i class="fa fa-circle slide-btn dot" onclick="currentSlide(5)"></i>
+            </div>
+        </section>
+        <!-- collection section here -->
+        <!-- footer start here -->
+        <footer class="center">
+            <div class="footer-content">
+                <h3>National Museum of setif</h3>
+                <p>Open from Saturday to Thursday</p>
+                <p>From 09h00 to 17h00</p>
+                <p>Last entry : 16h00</p>
+                <p>Rue de l'Armée de libération nationale, Sétif 19000, Algérie</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/MuseePublicNationalSetif/" target="_blank"><img src="./icons/fb.svg" alt=""></a>
+                    <a href="https://www.instagram.com/musee_public_national_setif/" target="_blank"><img src="./icons/insta.svg" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCuJYKGGWk0gJwCkJbXMHhOA" target="_blank"><img src="./icons/youtube.svg" alt=""></a>
+                </div>
+                <p class="copyright">
+                    ©2022 National Museum Of setif <br> Web Design & Development by Khellaf imad eddine & belamri anis
+                </p>
+            </div>
+        </footer>
+        <!-- footer end here -->
+
+
+    </div>
+    <!-- wrapper end here -->
+    <!-- javascript -->
+    <!-- navbar script -->
+    <script>
+        let lastScrollTop = 0;
+        let navbar = document.querySelector("nav");
+        window.addEventListener("scroll", function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.cssText = ' top:-100px;transition:.6s';
+            } else {
+                navbar.style.cssText = 'top: 0;transition:.4s';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+    <!-- navbar script -->
+    <!-- overlay memu navbar menu -->
+    <script async defer>
+        const Open = document.querySelector(".navbar-menu-open"),
+            Close = document.querySelector(".navbar-menu-close"),
+            navbarMenu = document.querySelector(".navbar-menu");
+        Open.addEventListener("click", function() {
+            navbarMenu.style.transform = "translateX(0%)";
+
+        });
+        Close.addEventListener("click", function() {
+            navbarMenu.style.transform = "translateX(100%)";
+        });
+    </script>
+    <!-- overlay menu navbar menu -->
+    <!-- curser -->
+    <script>
+        let cursor = document.querySelector('.cursor'),
+            cursorinner = document.querySelector('.cursor2'),
+            a = document.querySelectorAll('.link'),
+            slideCard = document.querySelectorAll('.card'),
+            slideArea = document.querySelectorAll('.slide-area'),
+            room = document.querySelectorAll('.room-box');
+
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursorinner.style.left = x + 'px';
+            cursorinner.style.top = y + 'px';
+        });
+
+        document.addEventListener('mousedown', function() {
+            cursor.classList.add('click');
+            cursorinner.classList.add('cursorinnerhover')
+        });
+
+        document.addEventListener('mouseup', function() {
+            cursor.classList.remove('click')
+            cursorinner.classList.remove('cursorinnerhover')
+        });
+
+        a.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hover');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        })
+
+        slideCard.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hovercard');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hovercard');
+            });
+        })
+        slideArea.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hoverslide');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hoverslide');
+            });
+        })
+        room.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hoverroom');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hoverroom');
+            });
+        })
+    </script>
+    <!-- curser -->
+
+    <!--collection carousel slide script here -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i,
+                slides = document.querySelectorAll(".mySlides"),
+                dots = document.querySelectorAll(".dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" dot-active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " dot-active";
+        }
+    </script>
+    <!-- collection carousel slide script here -->
+    <!-- collection 360 deg view script here -->
+    <script src="./js/pdt360DegViewer.js"></script>
+    <script>
+        var path1 = './collection/153/';
+        var path2 = './collection/01/';
+        var path3 = './collection/113/';
+        var path4 = './collection/117/';
+        var path5 = './collection/118/';
+
+
+        //pdt360DegViewer(imgDivid, count, path, imgType, playable, autoPlay, drag, mouseMove, buttonNavigation, keyNavigation, scroll);
+
+        //   pdt360DegViewer('car0', 39, path, 'jpg', true, true, false, false, false, false, false); //playable autoPlay
+        //   pdt360DegViewer('car1', 39, path, 'jpg', true, false, false, false, false, false, false); //playable
+        //   pdt360DegViewer('car2', 39, path, 'jpg', false, true, false, false, false, false, false); //autoPlay
+        pdt360DegViewer('obj1', 39, path1, 'jpg', false, false, true, false, false, false, false); //draggable
+        pdt360DegViewer('obj2', 40, path2, 'jpg', false, false, true, false, false, false, false); //draggable
+        pdt360DegViewer('obj3', 40, path3, 'jpg', false, false, true, false, false, false, false); //draggable
+        pdt360DegViewer('obj4', 33, path4, 'jpg', false, false, true, false, false, false, false); //draggable
+        pdt360DegViewer('obj5', 14, path5, 'jpg', false, false, true, false, false, false, false); //draggable
+        //   pdt360DegViewer('car4', 39, path, 'jpg', false, false, false, true, false, false, false); //mouseMove
+        //   pdt360DegViewer('car5', 39, path, 'jpg', false, false, false, false, true, false, false); //buttonNavigation
+        //   pdt360DegViewer('car6', 39, path, 'jpg', false, false, false, false, false, true, false); //keys
+        //   pdt360DegViewer('car7', 39, path, 'jpg', false, false, false, false, false, false, true); //scroll
+    </script>
+    <!-- collection 360 deg view script here -->
+</body>
+
+</html>

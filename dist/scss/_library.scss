@@ -1,0 +1,43 @@
+.download-books {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    margin: 0 15px 50px 15px;
+    .book-img {
+        height: 320px;
+        width: 230px;
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin-bottom: 10px;
+    }
+    a {
+        color: $orangeColor;
+    }
+}
+
+.books-table {
+    width: 100%;
+    overflow: scroll;
+    h1 {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        min-width: 600px;
+        text-align: left;
+        th {
+            padding: 0 10px 15px 10px;
+        }
+        td {
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background: $dark;
+            color: #fff;
+        }
+    }
+}
